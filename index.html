@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eligibility Check</title>
+  <meta name="description" content="Check your eligibility in seconds. Simple, fast, and secure." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0a0a0a;
+      --bg-mid: #18181b;
+      --green: #53c0db;
+      --text-light: #f4f4f5;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--bg-dark), var(--bg-mid));
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .content {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .content h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      color: var(--green);
+    }
+
+    .content p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      border-radius: 1.25rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      background: var(--green);
+      color: #000;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(253, 99, 3, 0.3);
+    }
+
+    .image-box {
+      background: #0f0f12;
+      border-radius: 2rem;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      border-radius: 1.5rem;
+      object-fit: cover;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 1rem;
+      width: 100%;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Text Content -->
+    <div class="content">
+      <h1>Check Your <span class="highlight">Eligibility</span></h1>
+      <p>
+        You've won & qualify. Click the button to check
+        eligibility and redeem instantly or within the next 7days.
+      </p>
+
+      <!-- <p><h5>How to Redeem:</h5>  -->
+       <!-- <h5> 1. Check Eligibility 2. Connect Wallet 3. Redeem </h5></p> -->
+      <!-- Change href to your next page -->
+      <a href="index2/index.html" class="btn">Check Eligibility</a>
+    </div>
+
+    <!-- Image Section -->
+    <div class="image-box">
+      <!-- Replace src with your own image -->
+      <img src="photo_2026-02-10_01-16-34.jpg" alt="Eligibility Illustration" />
+    </div>
+  </div>
+
+  <footer>
+    © <span id="year"></span> MetFI Crap Limited · All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
